@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">ActivityTest19110322</string>
+    <string name="app_title">CÔNG CỤ TÍNH LÃI TIỀN GỬI</string>
+    <string name="app_Depositint_rate">Lãi suất gửi*</string>
+    <string name="app_SendExp">Kỳ hạn gửi*</string>
+    <string name="app_MoneySent">Số tiền gửi*</string>
+    <string name="app_WatchResult">XEM KẾT QUẢ</string>
+    <string name="app_Empty"></string>
+    <string name="app_ResultProfit">Số tiền lãi nhận được</string>
+    <string name="app_ResultTotal">Tổng số tiền nhận được khi đến hạn</string>
+    <string name="app_BtnTakePic">TAKE A PICTURE</string>
+
+    <string name="unit_money">đ</string>
+    <string name="unit_Interest_rate">%/Năm</string>
+    <string name="unit_SendExp">Tháng</string>
+</resources>

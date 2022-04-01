@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="411dp"
+        android:layout_height="46dp"
+
+        android:paddingLeft="0dp"
+        android:paddingEnd="0dp"
+        android:paddingBottom="0dp"
+        android:text="@string/app_title"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/background_purple"
+        android:textIsSelectable="false"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="0dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="0dp"
+        android:paddingRight="3dp"
+        android:paddingBottom="0dp"
+        android:text="@string/app_MoneySent"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/TxtLayoutMoneysent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:paddingLeft="0dp"
+        android:paddingTop="5dp"
+        android:paddingEnd="0dp"
+        android:paddingRight="2dp"
+        android:paddingBottom="0dp"
+        android:text="@string/app_Empty"
+        android:textAlignment="textStart"
+        android:textColor="@color/background_purple"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        app:suffixText="@string/unit_money"
+        tools:ignore="SpeakableTextPresentCheck">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/Txtmoneysent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType ="number"
+            tools:ignore="SpeakableTextPresentCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="0dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="0dp"
+        android:paddingRight="3dp"
+        android:paddingBottom="0dp"
+        android:text="@string/app_Depositint_rate"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TxtLayoutMoneysent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/TxtLayoutInterest_rate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:paddingLeft="0dp"
+        android:paddingTop="5dp"
+        android:paddingEnd="0dp"
+        android:paddingRight="2dp"
+        android:paddingBottom="0dp"
+        android:text="@string/app_Empty"
+        android:textAlignment="textStart"
+        android:textColor="@color/background_purple"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:suffixText="@string/unit_Interest_rate"
+        app:layout_constraintTop_toBottomOf="@+id/textView7">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/TxtInterest_rate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType ="number"
+            tools:ignore="SpeakableTextPresentCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="0dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="0dp"
+        android:paddingRight="3dp"
+        android:paddingBottom="0dp"
+        android:text="@string/app_SendExp"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.571"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TxtLayoutInterest_rate" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/TxtLayoutPeriod"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:paddingLeft="0dp"
+        android:paddingTop="5dp"
+        android:paddingEnd="0dp"
+        android:paddingRight="2dp"
+        android:paddingBottom="0dp"
+        android:text="@string/app_Empty"
+        android:textAlignment="textStart"
+        android:textColor="@color/background_purple"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8"
+        app:suffixText="@string/unit_SendExp"
+        tools:ignore="SpeakableTextPresentCheck" >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/Txtperiod"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType ="number"
+            tools:ignore="SpeakableTextPresentCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btnWatchResult"
+        android:layout_width="249dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/custom_button"
+        android:foregroundTint="#000000"
+        android:onClick="launchResultActivity"
+        android:paddingLeft="0dp"
+        android:paddingTop="7dp"
+        android:paddingEnd="0dp"
+        android:paddingBottom="0dp"
+        android:singleLine="false"
+        android:text="@string/app_WatchResult"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TxtLayoutPeriod" />
+</androidx.constraintlayout.widget.ConstraintLayout>
