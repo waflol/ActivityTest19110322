@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
@@ -44,12 +45,23 @@ public class MainActivity extends AppCompatActivity {
     public void launchResultActivity(View view) {
         Log.d(LOG_TAG, "Button clicked!");
         Intent intent = new Intent(this, ResultActivity.class);
-        String Strmoneysent = getText(Txtmoneysent);
-        String Strinterest_rate = getText(Txtinterest_rate);
-        String Strperiod = getText(Txtperiod);
-        intent.putExtra(EXTRA_MESSAGE, new String[]{Strmoneysent,Strinterest_rate,Strperiod});
-        //startActivity(intent);
-        startActivityForResult(intent, TEXT_REQUEST);
+        if(TextUtils.isEmpty(Txtmoneysent.getText())){
+            Txtmoneysent.setError( "Field is required!");
+        }
+        else if(TextUtils.isEmpty(Txtinterest_rate.getText())){
+            Txtinterest_rate.setError( "Field is required!");
+        }
+        else if(TextUtils.isEmpty(Txtperiod.getText())){
+            Txtperiod.setError( "Field is required!");
+        }
+        else{
+            String Strmoneysent = getText(Txtmoneysent);
+            String Strinterest_rate = getText(Txtinterest_rate);
+            String Strperiod = getText(Txtperiod);
+            intent.putExtra(EXTRA_MESSAGE, new String[]{Strmoneysent,Strinterest_rate,Strperiod});
+            //startActivity(intent);
+            startActivityForResult(intent, TEXT_REQUEST);
+        }
     }
     private static String getText(EditText opEditText) {
         return opEditText.getText().toString();
