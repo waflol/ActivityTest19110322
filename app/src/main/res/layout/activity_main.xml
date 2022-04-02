@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
 
+    tools:context=".MainActivity">
     <TextView
         android:id="@+id/textView5"
         android:layout_width="411dp"
@@ -162,7 +162,6 @@
         android:id="@+id/btnWatchResult"
         android:layout_width="249dp"
         android:layout_height="53dp"
-        android:layout_marginTop="16dp"
         android:background="@drawable/custom_button"
         android:foregroundTint="#000000"
         android:onClick="launchResultActivity"
@@ -174,6 +173,7 @@
         android:text="@string/app_WatchResult"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/TxtLayoutPeriod" />

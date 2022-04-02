@@ -3,6 +3,7 @@ package com.android.activitytest19110322;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
@@ -27,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
         Txtmoneysent = findViewById(R.id.Txtmoneysent);
         Txtinterest_rate = findViewById(R.id.TxtInterest_rate);
         Txtperiod = findViewById(R.id.Txtperiod);
+        Txtmoneysent.requestFocus();
 
     }
     @Override
@@ -42,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
+
     public void launchResultActivity(View view) {
         Log.d(LOG_TAG, "Button clicked!");
         Intent intent = new Intent(this, ResultActivity.class);
